@@ -477,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-flex-wrap: wrap;
 }
 #fh5co-intro .fh5co-block {
-  width: 390px;
+  min-width: 390px;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -558,6 +558,16 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-intro .fh5co-block:hover .btn:hover, #fh5co-intro .fh5co-block:focus .btn:hover {
   background: #52d3aa !important;
   border: 2px solid #52d3aa !important;
+}
+
+
+.fh5co-content{
+    display:inline-block;
+    visibility: hidden;
+    padding-top:7em;
+    text-align: center;
+    width:100%;
+    height:300px;
 }
 
 #fh5co-skill, #fh5co-portfolio, #fh5co-contact, #fh5co-about {
@@ -1114,7 +1124,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .row-bottom-padded-lg {
-  padding-bottom: 17em;
+  padding-bottom: 8em;
 }
 @media screen and (max-width: 768px) {
   .row-bottom-padded-lg {
@@ -1193,7 +1203,6 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 15px;
     }
 }
-
 .video{
 	width:100%;
 	height:500px;

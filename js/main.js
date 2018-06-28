@@ -1,6 +1,8 @@
-;(function () {
+/*
+(function () {
 	
 	'use strict';
+*/
 
 
 
@@ -208,6 +210,28 @@
 		}
 	};
 
+    
+    var min_introduce=function(){
+        var isToggle=true;
+        $('#min-introduce').on('click',function(){
+            
+            $('#min-introduce').waypoint(function(){
+                if(isToggle){
+                $('.fh5co-content').removeClass('slideInDown animated');
+                $('.fh5co-content').html('안녕하세요.<br>강한 책임감과 열정 가득한 신입 개발자, 장준수입니다.<br>');
+                $('.fh5co-content').css('visibility','visible');
+                $('.fh5co-content').addClass('slideInUp animated');
+                isToggle=false;
+                }else{
+                $('.fh5co-content').removeClass('slideInUp animated');
+                $('.fh5co-content').css('visibility','hidden');
+                isToggle=true;
+                }
+            },{offset:'40%'});
+        });
+    };
+
+
 	var portfolioAnimate = function() {
 		if ( $('#fh5co-portfolio').length > 0 ) {	
 
@@ -360,7 +384,8 @@
 
 		goToTop();
 
-
+        min_introduce();
+        
 		// Animations
 		homeAnimate();
 		introAnimate();
@@ -373,4 +398,4 @@
 	});
 
 
-}());
+/*}());*/
