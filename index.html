@@ -924,9 +924,29 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6bW8hUhOyzbZxIAfv_r-3bl4MrZjpbEY&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmEzDt17FY6zE6Q5kPS2vlGy3lYQDQ7RQ&callback=initMap"
             async defer></script>
     <script>
+        function initMap() {
+            var myLatLng = {lat: 37.593044, lng: 126.673046};//완정역
+
+            // Create a map object and specify the DOM element
+            // for display.
+            var map = new google.maps.Map(document.getElementById('googleMap'), {
+                center: myLatLng,
+                zoom: 4
+            });
+
+            // Create a marker and set its position.
+            var marker = new google.maps.Marker({
+                map: map,
+                position: myLatLng,
+                title: '완정역'
+            });
+        }
+
+    </script>
+    <!--<script>
         var myCenter = new google.maps.LatLng(37.593044, 126.673046);//완정역
 
         function initialize() {
@@ -948,7 +968,7 @@
             }
 
             google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    </script>-->
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 
